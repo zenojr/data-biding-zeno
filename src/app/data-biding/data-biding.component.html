@@ -1,0 +1,51 @@
+
+<section>
+  <article>
+    <h3>Interpolação/Interpolation</h3>
+    <p> String renderizada com Interpolação: {{ url }} </p>
+    <p> Soma de 1 + 1 é: {{ 1 + 1 }} </p>
+    <p> A soma de 1 + 1 não é: {{ 1 + 1 + getValor() }} </p>
+    <p>Zeno is a developer: {{zenoDev && getZenoDev()}} </p>
+      
+    <img src="{{ urlImagem }}"> <!--data biding por interpolacao-->
+    <img [src]="urlImagem"> <!--data biding por propoerty biding-->
+    <img bind-src="urlImagem"> <!--data biding por propoerty biding-->
+  </article>
+  <br>
+  <article>
+    <h3>Class e Style Binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0"> <!--Cria uma variacel #classe e depois escuta se ocorrer (change)=0-->
+        <option value="alert-success">Successo</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Error</option>
+      </select>
+      <br><br> 
+      
+      <div class="alert {{ classe.value }} " role="alert">
+        Texto colorido conforme o combobox.
+      </div>
+
+      <div class="alert" role="alert" [class.alert-success] = "classe.value == 'alert-success'" >
+        Sucesso</div>
+        <!--Exemplo de style class-->
+      <div class="alert" role="alert" [class.alert-info] = "classe.value == 'alert-info'" >Info</div>
+      <div class="alert" role="alert" [class.alert-warning] = "classe.value == 'alert-warning'" >Alerta</div>
+      <div class="alert" role="alert" [class.alert-danger] = "classe.value == 'alert-danger'" >Erro</div>
+      <!--Exemplo de style biding-->
+      <div class="alert" role="alert" [style.display] = "classe.value == 'alert-danger' ? 'block' : 'none' " >Ocorreu um erro</div>
+    </div>
+  </article>
+  <br><br>
+  <article>
+    <h3>Event Biding</h3>
+    <div>
+      <button (click) = "botaoClicado()" class="btn btn-primary">Click Me!</button> 
+    </div>
+  </article>
+  <br><br>
+
+</section>
+
