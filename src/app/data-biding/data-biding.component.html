@@ -6,7 +6,7 @@
     <p> Soma de 1 + 1 é: {{ 1 + 1 }} </p>
     <p> A soma de 1 + 1 não é: {{ 1 + 1 + getValor() }} </p>
     <p>Zeno is a developer: {{zenoDev && getZenoDev()}} </p>
-      
+
     <img src="{{ urlImagem }}"> <!--data biding por interpolacao-->
     <img [src]="urlImagem"> <!--data biding por propoerty biding-->
     <img bind-src="urlImagem"> <!--data biding por propoerty biding-->
@@ -16,14 +16,14 @@
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe:
-      <select #classe (change)="0"> <!--Cria uma variacel #classe e depois escuta se ocorrer (change)=0-->
+      <select #classe (change)="0"> <!--Cria uma variavel #classe e depois escuta se ocorrer (change)=0-->
         <option value="alert-success">Successo</option>
         <option value="alert-info">Info</option>
         <option value="alert-warning">Alerta</option>
         <option value="alert-danger">Error</option>
       </select>
-      <br><br> 
-      
+      <br><br>
+
       <div class="alert {{ classe.value }} " role="alert">
         Texto colorido conforme o combobox.
       </div>
@@ -42,10 +42,9 @@
   <article>
     <h3>Event Biding</h3>
     <div>
-      <button (click) = "botaoClicado()" class="btn btn-primary">Click Me!</button> 
+      <button (click) = "botaoClicado()" class="btn btn-primary">Click Me!</button>
     </div>
   </article>
   <br><br>
 
 </section>
-
