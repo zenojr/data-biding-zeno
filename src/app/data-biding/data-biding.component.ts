@@ -15,7 +15,7 @@ export class DataBidingComponent implements OnInit {
   }
 
   zenoDev: boolean = true;
-
+    
   getZenoDev() {
     return true;
   }
