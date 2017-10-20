@@ -24,6 +24,10 @@ export class DataBidingComponent implements OnInit {
     return alert('Wowww');
   }
 
+  clickZeno(){
+    return alert('OK');
+  }
+
   constructor() { }
 
   ngOnInit() {
