@@ -10,7 +10,10 @@ export class DataBidingComponent implements OnInit {
   url: string = 'http://zenofranca.com';
   urlImagem = 'http://lorempixel.com/400/200/food/';
 
-  
+  valorAtual: string = '';
+  valorSalvo: string = ''; 
+
+  isMouseOver: boolean = false;
 
   getValor() {
     return 1;
@@ -30,12 +33,20 @@ export class DataBidingComponent implements OnInit {
     return alert('OK');
   }
 
-  valorAtual: string ='';
   onKeyUp(evento: KeyboardEvent){
-    
     this.valorAtual = (<HTMLInputElement>evento.target).value;
-    
-    
+  }
+
+  salvarValor(valor){
+    this.valorSalvo = valor;
+  }
+
+  // mouseEvent(){ teste meu
+  //   return alert('SHOWW')
+  // }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver; // sempre vai negar o valor e executar
   }
 
   constructor() { }
