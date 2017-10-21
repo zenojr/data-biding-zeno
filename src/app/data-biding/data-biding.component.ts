@@ -10,6 +10,8 @@ export class DataBidingComponent implements OnInit {
   url: string = 'http://zenofranca.com';
   urlImagem = 'http://lorempixel.com/400/200/food/';
 
+  
+
   getValor() {
     return 1;
   }
@@ -26,6 +28,14 @@ export class DataBidingComponent implements OnInit {
 
   clickZeno(){
     return alert('OK');
+  }
+
+  valorAtual: string ='';
+  onKeyUp(evento: KeyboardEvent){
+    
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
+    
+    
   }
 
   constructor() { }
