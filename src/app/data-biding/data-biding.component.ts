@@ -15,6 +15,19 @@ export class DataBidingComponent implements OnInit {
 
   isMouseOver: boolean = false;
 
+  // two way data biding
+
+  nome: string = '';
+
+  pessoa: any = {
+    nome: 'zeno',
+    idade: '',
+    endereco: {
+      rua: 'Salgado Filho',
+      bairro: 'Centro'
+    }
+  }
+
   getValor() {
     return 1;
   }

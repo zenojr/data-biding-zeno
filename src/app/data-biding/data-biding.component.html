@@ -66,3 +66,37 @@
   <br><br>
 
 </section>
+
+<section class="two-way-binding">
+  <article>
+    <h3>Two way Data Biding</h3>
+    <div>
+      <input type="text"
+        [value] = "nome"
+        (input) = "nome = $event.target.value"
+      />
+
+      <input type="text" 
+      [ngModel]="nome" 
+      (ngModelChange)="nome = $event" 
+      />
+
+      <!--Two way data biding [()]-->
+      <input type="text"
+      [(ngModel)] = "nome" 
+      />
+
+      <p>Voce digitou {{ nome }}</p>
+    </div>
+
+    <div>
+        <input type="text" [(ngModel)]='pessoa.nome' />
+        <input type="text" [(ngModel)]='pessoa.idade' /> 
+        <input type="text" [(ngModel)]='pessoa.endereco.rua' />
+        <input type="text" [(ngModel)]='pessoa.endereco.bairro' />     
+      <p>Meu nome é {{ pessoa.nome }} e minha idade é {{pessoa.idade}}, moro na rua {{ pessoa.endereco.rua }} no bairro {{ pessoa.endereco.bairro }} </p>
+
+    </div>
+  </article>
+
+</section>
